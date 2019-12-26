@@ -8,8 +8,8 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 
 # Data Loading
-df = pd.read_csv("/home/research/Desktop/GraphEmbedding-master/data/wiki/Wiki_edgelist.txt", header = None, sep = ' ')
-df_full = pd.read_csv("/home/research/Desktop/GraphEmbedding-master/data/wiki/wiki_labels.txt", header = None, sep = ' ')
+df = pd.read_csv("https://raw.githubusercontent.com/jyotiyadav99111/Node-Classification/master/wiki_edges.csv", header = None)
+df_full = pd.read_csv("https://raw.githubusercontent.com/jyotiyadav99111/Node-Classification/master/wiki_edges.csv", header = None)
 
 df.columns = ['A','B']
 df_full.columns = ['node', 'label']

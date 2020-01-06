@@ -15,9 +15,7 @@ df.columns = ['A','B']
 df_full.columns = ['node', 'label']
 
 df = df[df['A'] != df['B']]
-
 df_array = np.asarray(df)
-
 
 # Data Preprocessing
 data = {}
@@ -27,13 +25,12 @@ for line in df_array:
     else:
         data[line[0]] = [line[1]]
 
-new_data = [''] * 2405
+new_data = [''] * df_full.shape[0]
 for key in data.keys():
     new_data[key] = data[key]
 
 X=  pd.DataFrame.from_dict(data, orient='index')
 df_full['col']=  new_data
-
 
 
 # Data Seg
